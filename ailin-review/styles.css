@@ -1,9 +1,9 @@
-// ailin was here
 body {
   text-align: center;
   background-color: #011f3f;
 }
 
+// No es recomendado estilizar ids, yo le pondria una clase a este elemento
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -11,6 +11,7 @@ body {
   color: #fef2bf;
 }
 
+// En estos dias hablamos de flex :) El layout se puede simplificar
 .container {
   display: block;
   width: 50%;
@@ -22,65 +23,44 @@ body {
   display: inline-block;
   height: 200px;
   width: 200px;
-  border: 10px solid black;
+  border: 10px solid #000;
   border-radius: 20%;
 }
 
 .game-over {
-  background-color: red;
+  background-color: #ff0000; 
   opacity: 0.8;
 }
 
 .red {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .green {
-  background-color: green;
+  background-color: green; // hexadecimal porfis
 }
 
 .blue {
-  background-color: blue;
+  background-color: blue; // hex
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: yellow; // hex
 }
 
+// escribir todo esto lo evitarias con autoprefixer!
 .button-to-press {
-  -webkit-animation: fadein 0.5s;
-     -moz-animation: fadein 0.5s;
-      -ms-animation: fadein 0.5s;
-       -o-animation: fadein 0.5s;
-          animation: fadein 0.5s;
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-moz-keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-ms-keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-o-keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  animation: fadein .5s;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+// los keyframes siempre van al final!
+// escribir todo esto lo evitarias con autoprefixer!
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
